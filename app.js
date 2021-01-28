@@ -48,23 +48,73 @@ function employeeQuestions() {
       })
 }
 
-function internInfo() {
+function internInfo(internAnswers) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Where do you attent school?',
+            name: 'school',
+        },
+        {
+            type: 'checkbox',
+            message: 'Would you like to add user?',
+            name: 'adduser',
+            choices: [
+                "Yes",
+                "No",
+            ]
+        },
+    ]
 
+    )
 }
 
-function engineerInfo() {
-
+function engineerInfo(engineerAnswers) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is your GitHub Account?',
+            name: 'github',
+        },
+        {
+            type: 'checkbox',
+            message: 'Would you like to add user?',
+            name: 'adduser',
+            choices: [
+                "Yes",
+                "No",
+            ]
+        },
+    ])
 }
 
-function managerInfo() {
-    
+function managerInfo(managerAnswers) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is your office number?',
+            name: 'officenumber',
+        },
+        {
+            type: 'checkbox',
+            message: 'Would you like to add user?',
+            name: 'adduser',
+            choices: [
+                "Yes",
+                "No",
+            ]
+        },
+    ])
 }
-
-// and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+
+
+
+
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
