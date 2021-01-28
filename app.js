@@ -113,9 +113,8 @@ function managerInfo(managerAnswers) {
     ])
     .then (function(managerAnswers) {
         let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officenumber)
+        employee.push(newManager)
     });
 }
 
-function userAdded() {
 
-}
